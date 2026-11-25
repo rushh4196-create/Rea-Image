@@ -1,9 +1,9 @@
 # IMAGE.md — Forensic Blueprint (rea-image, Stage 2)
-Reference: examples/woman-white-dress/reference.jpg (cloudyx_art style reference) (cloudyx_art style)
+Reference: examples/woman-white-dress/reference.jpg
 Work dir: examples/woman-white-dress/
 
 ## 1. Classification & Hard Evidence
-- Class: **2. AI-Generated** (Route A). No EXIF/camera signals, no AIGC metadata (stripped by Instagram upload), smooth shadow transitions, flat-region ratio 0.83, hyper-clean diffused lighting, surreal 90°-rotated composition.
+- Class: **2. AI-Generated** (Route A). No EXIF/camera signals, no AIGC metadata (stripped on upload), smooth shadow transitions, flat-region ratio 0.83, hyper-clean diffused lighting, surreal 90°-rotated composition.
 - Canvas: **720 x 1280, 9:16 vertical**. File 86,998 bytes, JPEG, JFIF only.
 
 ## 2. Canvas, Tone & 9-Zone Color Map
@@ -18,7 +18,7 @@ Work dir: examples/woman-white-dress/
 - Woman: lying horizontally across the middle, body x 16–58%, y 40–66%; head at x 48–58%, y 42–52%, dark hair in a low bun, face turned away/up (no facial detail); flowing white dress, fabric draping toward the ground (left); one arm raised up-left, hand relaxed at x ~33%, y ~38%.
 - Sky: fills x 33–100%, y 0–100%; pale near-white blue at top-center, deepening to teal at bottom-right.
 - Clouds: soft, small — one at top-right (x 66–100%, y 8–30%), one at mid-right/bottom-center (x 33–66%, y 55–85%), warm-tinted edges.
-- Watermark: "CLOUDYX.ART" vertical text at x ~8–12%, y ~38–62% — PRESENT in reference; do NOT reproduce in recreations (our rule).
+- Watermark: a vertical artist watermark at x ~8–12%, y ~38–62% — PRESENT in reference; do NOT reproduce in recreations (our rule).
 
 ## 4. Optics & Realistic Physics Audit
 - Camera: eye-level wide shot, 90° rotated composition (ground edge vertical); deep depth of field — woman + near grass sharp (Laplacian variance 400.6), sky/clouds soft; no visible lens distortion.
@@ -27,4 +27,4 @@ Work dir: examples/woman-white-dress/
 - Materials: dress is translucent white cotton (light passes through the skirt edge); grass is dry, fine, golden-brown tips; skin is soft with no harsh specular highlights.
 
 ## 5. Typography & Overlays
-- Only the vertical "CLOUDYX.ART" watermark (excluded from recreations). No other text.
+- Only the vertical artist watermark (excluded from recreations). No other text.

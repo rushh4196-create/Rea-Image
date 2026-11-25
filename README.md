@@ -6,6 +6,35 @@ Measure every pixel property deterministically, pin every object to exact coordi
 
 > **What this is:** a skill (prompt + scripts) for AI assistants, not an app. It tells an agent how to inspect, recreate and verify an image, with the Python tools to do the measuring.
 
+## Example — woman in white dress (25 Nov 2026)
+
+A cinematic teal-and-gold image, 720 x 1280, 9:16. Reference on the left, recreation after LAB calibration in the middle, and the verification comparison (Reference | Recreated | 4x amplified diff heatmap) below.
+
+| Reference | Recreated (calibrated) |
+|---|---|
+| <img src="examples/woman-white-dress/reference.jpg" width="320" alt="Reference image — woman in a white dress in a teal-and-gold field"> | <img src="examples/woman-white-dress/clone-calibrated.png" width="320" alt="Recreated image after LAB calibration — woman in a white dress in a teal-and-gold field"> |
+
+<img src="examples/woman-white-dress/comparison.png" width="660" alt="Verification comparison — reference, recreated image, and 4x amplified diff heatmap">
+
+| | Pass 1 (generation) | Pass 2 (after LAB calibration) |
+|---|---:|---:|
+| Reference | 720 x 1280, 9:16 | 720 x 1280, 9:16 |
+| Recreated | 1152 x 2048 | 720 x 1280 |
+| **SSIM** | 0.9033 | **0.9121** |
+| **Edge correlation** | 0.9370 | **0.9381** |
+| Colour histogram similarity | 0.8517 | 0.8475 |
+| **Mean LAB Delta-E** | 8.19 | **5.01** |
+| Global luminance bias | 15.79 | 4.08 |
+
+All example files are in `examples/woman-white-dress/`:
+
+- `reference.jpg` — the original reference image
+- `clone-calibrated.png` — the final recreated image after calibration
+- `comparison.png` — Reference | Recreated | 4x amplified diff heatmap
+- `grid-overlay.png` — 6x6 coordinate grid used to lock every object in place
+- `IMAGE.md` — the full forensic blueprint (palette, 9-zone map, layout, optics, physics audit)
+- `metrics.json` — the full per-zone metrics from the final verification pass
+
 ## How it works — 6 stages
 
 1. **Forensic extraction** — `scripts/inspect_image.py` measures exact `W x H`, aspect ratio, EXIF / PNG / AIGC metadata, a 12-colour global hex palette, a 9-zone (3x3) spatial hex + luminance + saturation map, tone-curve percentiles (`p02`, `p15`, `p50`, `p85`, `p98`), colour temperature, directional lighting, sharpness / grain (Laplacian variance), edge density and flat-region ratio. It also renders a 6x6 coordinate grid overlay and a 3x3 tile sheet.
@@ -18,29 +47,6 @@ Measure every pixel property deterministically, pin every object to exact coordi
 4. **Closed-loop verification** — after every pass, `scripts/verify_clone.py` measures per-zone SSIM, edge correlation, LAB Delta-E, colour-histogram similarity and luminance bias, and prints auto-fix directives plus a 4x amplified diff heatmap.
 5. **Calibration** — when structure aligns but colour / exposure drifts, `scripts/calibrate_clone.py` does a LAB colour-grade transfer (`--strength 0.70` by default).
 6. **Final inspection & clean delivery** — visual physics check, then report the forensic summary with the actual measured metrics.
-
-## Verified proof — woman in white dress (25 Nov 2026)
-
-Example in `examples/woman-white-dress/` — a cinematic teal-and-gold image in the style of [@cloudyx_art](https://www.instagram.com/cloudyx_art/) (reference image credited to cloudyx_art; used here only as a demo reference). **No personal / real photo of the author is used anywhere in this repo.**
-
-| | Pass 1 (generation) | Pass 2 (after LAB calibration) |
-|---|---:|---:|
-| Reference | 720 x 1280, 9:16 | 720 x 1280, 9:16 |
-| Recreated | 1152 x 2048 | 720 x 1280 |
-| **SSIM** | 0.9033 | **0.9121** |
-| **Edge correlation** | 0.9370 | **0.9381** |
-| Colour histogram similarity | 0.8517 | 0.8475 |
-| **Mean LAB Delta-E** | 8.19 | **5.01** |
-| Global luminance bias | 15.79 | 4.08 |
-
-Files in the example folder:
-
-- `reference.jpg` — the original reference image
-- `clone-calibrated.png` — the final recreated image after calibration
-- `comparison.png` — Reference | Recreated | 4x amplified diff heatmap
-- `grid-overlay.png` — 6x6 coordinate grid used to lock every object in place
-- `IMAGE.md` — the full forensic blueprint (palette, 9-zone map, layout, optics, physics audit)
-- `metrics.json` — the full per-zone metrics from the final verification pass
 
 ## Install
 
@@ -93,4 +99,4 @@ examples/
 
 ## License
 
-Use freely. The example reference image is credited to cloudyx_art and is included only to demonstrate the verification workflow.
+Use freely. The example reference image is included only to demonstrate the verification workflow.
