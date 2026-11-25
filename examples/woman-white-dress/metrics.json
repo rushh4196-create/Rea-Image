@@ -1,0 +1,88 @@
+{
+  "reference_dimensions": [
+    720,
+    1280
+  ],
+  "recreated_dimensions": [
+    720,
+    1280
+  ],
+  "aspect_ratio_relative_delta": 0.0,
+  "block_ssim_0_1": 0.9121,
+  "edge_correlation_0_1": 0.9381,
+  "color_histogram_similarity_0_1": 0.8475,
+  "mean_lab_delta_e": 5.01,
+  "global_luminance_bias": 4.08,
+  "normalized_rmse_0_1": 0.0508,
+  "worst_zones": [
+    {
+      "zone": "mid-left",
+      "ssim": 0.6928,
+      "mean_lab_delta_e": 5.41,
+      "luminance_bias": -0.5
+    },
+    {
+      "zone": "bottom-left",
+      "ssim": 0.8581,
+      "mean_lab_delta_e": 4.12,
+      "luminance_bias": -0.5
+    },
+    {
+      "zone": "top-left",
+      "ssim": 0.8836,
+      "mean_lab_delta_e": 4.86,
+      "luminance_bias": 0.5
+    }
+  ],
+  "auto_fix_directives": [
+    "Color grade drift (dE=5.0, hist=0.847) -> run calibrate_clone.py --strength 0.70",
+    "Refine zone 'mid-left' (SSIM=0.6928, dE=5.41, lum_bias=-0.5)"
+  ],
+  "zone_metrics_3x3": {
+    "top-left": {
+      "ssim": 0.8836,
+      "mean_lab_delta_e": 4.86,
+      "luminance_bias": 0.5
+    },
+    "top-center": {
+      "ssim": 0.9126,
+      "mean_lab_delta_e": 6.23,
+      "luminance_bias": -5.2
+    },
+    "top-right": {
+      "ssim": 0.9631,
+      "mean_lab_delta_e": 6.12,
+      "luminance_bias": 11.1
+    },
+    "mid-left": {
+      "ssim": 0.6928,
+      "mean_lab_delta_e": 5.41,
+      "luminance_bias": -0.5
+    },
+    "center": {
+      "ssim": 0.9171,
+      "mean_lab_delta_e": 5.95,
+      "luminance_bias": 9.3
+    },
+    "mid-right": {
+      "ssim": 0.9729,
+      "mean_lab_delta_e": 4.2,
+      "luminance_bias": 9.1
+    },
+    "bottom-left": {
+      "ssim": 0.8581,
+      "mean_lab_delta_e": 4.12,
+      "luminance_bias": -0.5
+    },
+    "bottom-center": {
+      "ssim": 0.9544,
+      "mean_lab_delta_e": 5.23,
+      "luminance_bias": 11.6
+    },
+    "bottom-right": {
+      "ssim": 0.9739,
+      "mean_lab_delta_e": 2.95,
+      "luminance_bias": 1.3
+    }
+  }
+}
