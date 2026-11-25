@@ -18,7 +18,7 @@ Work dir: examples/woman-white-dress/
 - Woman: lying horizontally across the middle, body x 16–58%, y 40–66%; head at x 48–58%, y 42–52%, dark hair in a low bun, face turned away/up (no facial detail); flowing white dress, fabric draping toward the ground (left); one arm raised up-left, hand relaxed at x ~33%, y ~38%.
 - Sky: fills x 33–100%, y 0–100%; pale near-white blue at top-center, deepening to teal at bottom-right.
 - Clouds: soft, small — one at top-right (x 66–100%, y 8–30%), one at mid-right/bottom-center (x 33–66%, y 55–85%), warm-tinted edges.
-- Watermark: a vertical artist watermark at x ~8–12%, y ~38–62% — PRESENT in reference; do NOT reproduce in recreations (our rule).
+- Watermark: none — the original reference carried a vertical artist watermark at x ~8–12%, y ~38–62%; it was removed by inpainting before publishing, so the published reference is watermark-free.
 
 ## 4. Optics & Realistic Physics Audit
 - Camera: eye-level wide shot, 90° rotated composition (ground edge vertical); deep depth of field — woman + near grass sharp (Laplacian variance 400.6), sky/clouds soft; no visible lens distortion.
@@ -27,4 +27,4 @@ Work dir: examples/woman-white-dress/
 - Materials: dress is translucent white cotton (light passes through the skirt edge); grass is dry, fine, golden-brown tips; skin is soft with no harsh specular highlights.
 
 ## 5. Typography & Overlays
-- Only the vertical artist watermark (excluded from recreations). No other text.
+- No text or watermark in the published reference. No other text.

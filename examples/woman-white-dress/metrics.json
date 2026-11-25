@@ -8,74 +8,73 @@
     1280
   ],
   "aspect_ratio_relative_delta": 0.0,
-  "block_ssim_0_1": 0.9121,
-  "edge_correlation_0_1": 0.9381,
-  "color_histogram_similarity_0_1": 0.8475,
-  "mean_lab_delta_e": 5.01,
-  "global_luminance_bias": 4.08,
-  "normalized_rmse_0_1": 0.0508,
+  "block_ssim_0_1": 0.9264,
+  "edge_correlation_0_1": 0.9577,
+  "color_histogram_similarity_0_1": 0.8477,
+  "mean_lab_delta_e": 4.98,
+  "global_luminance_bias": 4.14,
+  "normalized_rmse_0_1": 0.0502,
   "worst_zones": [
     {
       "zone": "mid-left",
-      "ssim": 0.6928,
-      "mean_lab_delta_e": 5.41,
-      "luminance_bias": -0.5
+      "ssim": 0.8123,
+      "mean_lab_delta_e": 5.15,
+      "luminance_bias": 0.0
     },
     {
       "zone": "bottom-left",
-      "ssim": 0.8581,
-      "mean_lab_delta_e": 4.12,
+      "ssim": 0.8578,
+      "mean_lab_delta_e": 4.11,
       "luminance_bias": -0.5
     },
     {
       "zone": "top-left",
-      "ssim": 0.8836,
-      "mean_lab_delta_e": 4.86,
+      "ssim": 0.8832,
+      "mean_lab_delta_e": 4.85,
       "luminance_bias": 0.5
     }
   ],
   "auto_fix_directives": [
-    "Color grade drift (dE=5.0, hist=0.847) -> run calibrate_clone.py --strength 0.70",
-    "Refine zone 'mid-left' (SSIM=0.6928, dE=5.41, lum_bias=-0.5)"
+    "Color grade drift (dE=5.0, hist=0.848) -> run calibrate_clone.py --strength 0.70"
   ],
   "zone_metrics_3x3": {
     "top-left": {
-      "ssim": 0.8836,
-      "mean_lab_delta_e": 4.86,
+      "ssim": 0.8832,
+      "mean_lab_delta_e": 4.85,
       "luminance_bias": 0.5
     },
     "top-center": {
-      "ssim": 0.9126,
+      "ssim": 0.9123,
       "mean_lab_delta_e": 6.23,
       "luminance_bias": -5.2
     },
     "top-right": {
-      "ssim": 0.9631,
-      "mean_lab_delta_e": 6.12,
+      "ssim": 0.9628,
+      "mean_lab_delta_e": 6.13,
       "luminance_bias": 11.1
     },
     "mid-left": {
-      "ssim": 0.6928,
-      "mean_lab_delta_e": 5.41,
-      "luminance_bias": -0.5
+      "ssim": 0.8123,
+      "mean_lab_delta_e": 5.15,
+      "luminance_bias": 0.0
     },
     "center": {
-      "ssim": 0.9171,
-      "mean_lab_delta_e": 5.95,
+      "ssim": 0.9168,
+      "mean_lab_delta_e": 5.94,
       "luminance_bias": 9.3
     },
     "mid-right": {
-      "ssim": 0.9729,
+      "ssim": 0.9728,
       "mean_lab_delta_e": 4.2,
       "luminance_bias": 9.1
     },
     "bottom-left": {
-      "ssim": 0.8581,
-      "mean_lab_delta_e": 4.12,
+      "ssim": 0.8578,
+      "mean_lab_delta_e": 4.11,
       "luminance_bias": -0.5
     },
     "bottom-center": {
-      "ssim": 0.9544,
+      "ssim": 0.9542,
       "mean_lab_delta_e": 5.23,
       "luminance_bias": 11.6
     },

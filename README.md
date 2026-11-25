@@ -20,11 +20,11 @@ A cinematic teal-and-gold image, 720 x 1280, 9:16. Reference on the left, recrea
 |---|---:|---:|
 | Reference | 720 x 1280, 9:16 | 720 x 1280, 9:16 |
 | Recreated | 1152 x 2048 | 720 x 1280 |
-| **SSIM** | 0.9033 | **0.9121** |
-| **Edge correlation** | 0.9370 | **0.9381** |
-| Colour histogram similarity | 0.8517 | 0.8475 |
-| **Mean LAB Delta-E** | 8.19 | **5.01** |
-| Global luminance bias | 15.79 | 4.08 |
+| **SSIM** | 0.9033 | **0.9264** |
+| **Edge correlation** | 0.9370 | **0.9577** |
+| Colour histogram similarity | 0.8517 | 0.8477 |
+| **Mean LAB Delta-E** | 8.19 | **4.98** |
+| Global luminance bias | 15.79 | 4.14 |
 
 All example files are in `examples/woman-white-dress/`:
 
